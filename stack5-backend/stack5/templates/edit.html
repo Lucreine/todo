@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask</title>
+</head>
+<body>
+    <div className="App container">   
+        <div className="todo-app">
+          <h1>Task Tracker Safari</h1>
+          <form action="{{ url_for('edit', id=task.id) }}" method="POST">
+            <div>
+                <label>Tâche</label>
+                <input type="text" name="tache" value="{{ task.tache }}" required/><br/>
+            </div>
+            <button>Update</button>
+        </form>
+        <div className='task'>
+            <h4>TASK DONE 0/5</h4> 
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
